@@ -1,0 +1,35 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: whitesmoke;
+}
+
+header {
+	display: flex;
+}
+
+h1 {}
+
+.mode-btn-container {
+	display: flex;
+	flex-grow: 1;
+	justify-content: end;
+}
+
+#card-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card {
+	max-width: 450px;
+	height: fit-content;
+	background-color: white;
+	margin: 30px 40px;
+	box-shadow: 12px 7px 20px 6px rgb(57 75 84 / 8%);
+}
+
+.img-card {
+	width: 10px;
+	height: 10px;
+}
