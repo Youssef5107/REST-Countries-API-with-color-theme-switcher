@@ -18,9 +18,9 @@ function getInnerCards(data) {
 					<img src="${data[i].flags.svg}"class="img-card">
 					<div class="card-details-area">
 						<div class="country-name">${data[i].name}</div>
-						<div class="card-detail">${data[i].population}</div>
-						<div class="card-detail">${data[i].region}</div>
-						<div class="card-detail">${data[i].capital}</div>
+						<div class="card-detail">Population: <span class="detail">${data[i].population}</span></div>
+						<div class="card-detail">Region: <span class="detail">${data[i].region}</span></div>
+						<div class="card-detail">Capital: <span class="detail">${data[i].capital}</span></div>
 					</div>
 				</div>		
 		`
