@@ -15,7 +15,7 @@ function getInnerCards(data) {
 	for (i = 0; i < data.length; i++) {
 		content = content + `
 				<div class="card">
-					<img class="img-card">
+					<img src="${data[i].flags.svg}"class="img-card">
 					<div class="card-details-area">
 						<div class="country-name">${data[i].name}</div>
 						<div class="card-detail">${data[i].population}</div>
