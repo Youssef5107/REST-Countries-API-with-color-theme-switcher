@@ -80,6 +80,16 @@ function hideCardDetails() {
 
 }
 
+function search() {
+	var input = document.querySelector("input");
+	var countryName = data.filter((givenName) => input.value == givenName.name);
+	drawCountryCards(countryName);
+	console.log(countryName);
+	console.log(input.value);
+}
+
+
+
 function selectContinent(continentName) {
 	if (continentName == "All") {
 		drawCountryCards(data);
