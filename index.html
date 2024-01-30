@@ -13,23 +13,29 @@
 		<h1>Where in the world?</h1>
 		<div class="mode-btn-container">
 			<img class="dark-mode-img" src="images/211778_moon_icon.png" alt="moon">
-			<button class="dark-mode">Dark Mode</button>
+			<button onclick="darkMode()" class="dark-mode">Dark Mode</button>
 		</div>
 	</header>
-	<section>
-		<input type="text" placeholder="Search for a country...">
-		<div class="selection-area">
-			<select>
-				<option>All</option>
-				<option>Africa</option>
-				<option>America</option>
-				<option>Asia</option>
-				<option>Europe</option>
-				<option>Ocenia</option>
-			</select>
-		</div>
-	</section>
-	<div id="card-container"></div>
+	<main>
+		<section>
+			<input type="text" placeholder="Search for a country...">
+			<div class="selection-area">
+				<select>
+					<option>All</option>
+					<option>Africa</option>
+					<option>America</option>
+					<option>Asia</option>
+					<option>Europe</option>
+					<option>Ocenia</option>
+				</select>
+			</div>
+		</section>
+		<div id="card-container"></div>
+	</main>
+	<div class="country-details-area">
+		<button onclick="hideCardDetails()" class="back"><img class="arrow"
+				src="images/4829870_arrow_back_left_icon.png">Back</button>
+	</div>
 	<script src="javascript.js"></script>
 </body>
 
