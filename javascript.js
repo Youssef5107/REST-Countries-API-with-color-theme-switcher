@@ -46,22 +46,26 @@ function showCardDetails(countryCode) {
 	countryArea.style.display = "block";
 	var country = data.find((country) => country.alpha3Code == countryCode);
 	countryArea.innerHTML = `
+	<button onclick="hideCardDetails()" class="back"><img class="arrow"
+				src="images/4829870_arrow_back_left_icon.png">Back</button>
 	<div class="content-area">
 			<img class="selected-country-flag" src="${country.flags.svg}">
-			<div class="details-area">
-				<div class="selected-county-name">${country.name}</div>
-				<div class="selected-county-detail-title">Native Name: <span class="selected-county-detail">${country.nativeName}</span>
-				</div>
-				<div class="selected-county-detail-title">Top Level Domain: <span class="selected-county-detail">${country.topLevelDomain}</span>
-				</div>
-				<div class="selected-county-detail-title">Population: <span class="selected-county-detail">${country.population}</span></div>
-				<div class="selected-county-detail-title">Currencies: <span class="selected-county-detail">${country.currencies.name}</span></div>
-				<div class="selected-county-detail-title">Region: <span class="selected-county-detail">${country.region}</span></div>
-				<div class="selected-county-detail-title">Sub Region: <span class="selected-county-detail">${country.languages}</span></div>
-				<div class="selected-county-detail-title">Languages: <span class="selected-county-detail">${country.subregion}</span></div>
-				<div class="selected-county-detail-title">Capital: <span class="selected-county-detail">${country.capital}</span></div>
-				<div class="border-countries-detail-title">Border Countries: <span
+			<div class="details-area-container">
+				<div class="details-area">
+					<div class="selected-county-name">${country.name}</div>
+					<div class="selected-county-detail-title">Native Name: <span class="selected-county-detail">${country.nativeName}</span>
+					</div>
+					<div class="selected-county-detail-title">Top Level Domain: <span class="selected-county-detail">${country.topLevelDomain}</span>
+					</div>
+					<div class="selected-county-detail-title">Population: <span class="selected-county-detail">${country.population}</span></div>
+					<div class="selected-county-detail-title">Currencies: <span class="selected-county-detail">${country.currencies.name}</span></div>
+					<div class="selected-county-detail-title">Region: <span class="selected-county-detail">${country.region}</span></div>
+					<div class="selected-county-detail-title">Sub Region: <span class="selected-county-detail">${country.languages}</span></div>
+					<div class="selected-county-detail-title">Languages: <span class="selected-county-detail">${country.subregion}</span></div>
+					<div class="selected-county-detail-title">Capital: <span class="selected-county-detail">${country.capital}</span></div>
+					<div class="border-countries-detail-title">Border Countries: <span
 						class="border-countries-detail"></span> </div>
+				</div>
 			</div>
 		</div>
 	
@@ -70,8 +74,20 @@ function showCardDetails(countryCode) {
 }
 
 function hideCardDetails() {
+	document.querySelector("main").style.display = "block";
+	document.querySelector(".country-details-area").style.display = "none";
 
 }
+
+function selectContinent(continentName) {
+	console.log(continentName);
+	// data.filter(function (continent) {
+	// 	if (continentName != continent.region) {
+	// 	}
+	// });
+
+}
+selectContinent()
 
 
 
