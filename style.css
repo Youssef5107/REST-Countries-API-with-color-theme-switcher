@@ -32,6 +32,16 @@ h1 {}
 	background-color: white;
 }
 
+.dark {
+	background-color: hsl(207, 26%, 17%);
+	transition: all 0.8s ease;
+}
+
+.dark2 {
+	background-color: hsl(209, 23%, 22%);
+	transition: all 0.8s ease;
+}
+
 section {
 	display: flex;
 	justify-content: center;
@@ -140,16 +150,4 @@ select {
 	justify-content: end;
 	margin-left: 50px;
 	align-items: center;
-}
-
-@keyframes background {
-	from {
-		background-color: white;
-	}
-
-	to {
-		background-color: rgb(40, 40, 40);
-	}
-
-
 }

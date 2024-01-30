@@ -31,13 +31,14 @@ function drawCountryCards(data) {
 }
 
 function darkMode() {
-	var body = document.querySelector("body");
-	var header = document.querySelector("header");
-	var input = document.querySelector("input");
+	document.querySelector("body").classList.add("dark");
+	document.querySelector("header").classList.add("dark2");
+	document.querySelector("input").classList.add("dark2");
+	document.querySelector(".dark-mode").classList.add("dark2");
+	document.querySelector("select").classList.add("dark2");
 	var detailsArea = document.querySelectorAll(".card-details-area");
-	body.style.animation = "background";
-	body.style.animationDuration = "2s"
-	detailsArea.style.backgroundColor = "grey";
+	for (i = 0; i < detailsArea.length; i++)
+		detailsArea[i].classList.add("dark2");
 }
 
 function showCardDetails(countryCode) {
@@ -83,6 +84,7 @@ function hideCardDetails() {
 function search() {
 	var input = document.querySelector("input");
 	var countryName = data.filter((givenName) => input.value == givenName.name);
+
 	drawCountryCards(countryName);
 	console.log(countryName);
 	console.log(input.value);
