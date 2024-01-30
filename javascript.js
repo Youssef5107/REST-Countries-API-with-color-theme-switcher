@@ -3,19 +3,20 @@ var data = null;
 async function get() {
 	const response = await fetch("data.json");
 	data = await response.json();
-	getInnerCards(data);
+	drawCountryCards(data);
 }
 
 get()
 
-function getInnerCards(data) {
+function drawCountryCards(data) {
 	var card = document.querySelector("#card-container");
 
 	var content = "";
 	for (i = 0; i < data.length; i++) {
 		content = content + `
 				<div class="card" onclick="showCardDetails('${data[i].alpha3Code}')">
-					<img src="${data[i].flags.svg}"class="img-card">
+				<div class="card-img-area"><img src="${data[i].flags.svg}"class="img-card"></div>
+					
 					<div class="card-details-area">
 						<div class="country-name">${data[i].name}</div>
 						<div class="card-detail">Population: <span class="detail">${data[i].population}</span></div>
@@ -80,14 +81,16 @@ function hideCardDetails() {
 }
 
 function selectContinent(continentName) {
-	console.log(continentName);
-	// data.filter(function (continent) {
-	// 	if (continentName != continent.region) {
-	// 	}
-	// });
+	if (continentName == "All") {
+		drawCountryCards(data);
+	} else {
+		var selectedContinent = data.filter((continent) => continentName == continent.region);
+		drawCountryCards(selectedContinent);
+
+	}
 
 }
-selectContinent()
+
 
 
 

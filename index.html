@@ -20,13 +20,13 @@
 		<section>
 			<input type="text" placeholder="Search for a country...">
 			<div class="selection-area">
-				<select>
-					<option>All</option>
-					<option onclick="selectContinent(Africa)">Africa</option>
-					<option onclick="selectContinent(America)">America</option>
-					<option onclick="selectContinent(Asia)">Asia</option>
-					<option onclick="selectContinent(Europe)">Europe</option>
-					<option onclick="selectContinent(Ocenia)">Ocenia</option>
+				<select onchange="selectContinent(this.value)">
+					<option value="All">All</option>
+					<option value="Africa">Africa</option>
+					<option value="Americas">Americas</option>
+					<option value="Asia">Asia</option>
+					<option value="Europe">Europe</option>
+					<option value="Ocenia">Ocenia</option>
 				</select>
 			</div>
 		</section>
