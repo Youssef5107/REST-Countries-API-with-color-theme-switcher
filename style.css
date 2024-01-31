@@ -2,24 +2,53 @@ body {
 	margin: 0px;
 	padding: 0px;
 	background-color: white;
+	transition: all 0.8s ease;
 }
 
 header {
 	display: flex;
-	background-color: white;
 	box-shadow: 12px 7px 20px 6px rgb(57 75 84 / 8%);
 	border-radius: 0px 0px 5px 5px;
 	padding: 0px 25px;
+	transition: all 0.8s ease;
 }
 
-h1 {}
+.dark header,
+.dark .card-details-area,
+.dark input,
+.dark select {
+	background-color: hsl(209, 23%, 22%);
+	transition: all 0.8s ease;
+}
+
+.dark select,
+.dark .light-mode,
+.dark h1,
+.dark .country-name,
+.dark .card-detail {
+	color: white;
+	transition: all 0.8s ease;
+}
 
 .mode-btn-container {
 	display: flex;
 	flex-grow: 1;
 	justify-content: end;
+}
+
+.light-mode-btn-container,
+.dark-mode-btn-container {
+	display: flex;
+	flex-grow: 1;
+	justify-content: end;
 	align-items: center;
 }
+
+.light-mode-btn-container {
+	display: none;
+	color: white;
+}
+
 
 .dark-mode-img {
 	width: 30px;
@@ -29,7 +58,8 @@ h1 {}
 .dark-mode {
 	height: 50px;
 	border: 0px;
-	background-color: white;
+	background-color: transparent;
+
 }
 
 .dark {
@@ -54,6 +84,7 @@ input {
 	border-radius: 5px;
 	border: 0px;
 	box-shadow: 0px 0px 20px 6px rgb(57 75 84 / 8%);
+	transition: all 0.8s ease;
 }
 
 .selection-area {
@@ -68,6 +99,7 @@ select {
 	background-color: white;
 	border-radius: 5px;
 	box-shadow: 12px 7px 20px 6px rgb(57 75 84 / 8%);
+	transition: all 0.8s ease;
 }
 
 #card-container {
@@ -84,6 +116,7 @@ select {
 	background-color: white;
 	margin: 30px 40px;
 	box-shadow: 12px 7px 20px 6px rgb(57 75 84 / 8%);
+	transition: all 0.8s ease;
 }
 
 .card-img-area {
