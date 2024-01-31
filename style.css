@@ -49,6 +49,11 @@ header {
 	color: white;
 }
 
+.light-mode-img {
+	width: 25px;
+	margin-right: 5px;
+}
+
 
 .dark-mode-img {
 	width: 30px;
