@@ -104,31 +104,3 @@ function selectContinent(continentName) {
 	}
 
 }
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////
-
-// onclick="showCardDetails(${`country-name${[i]}`})"
-// country-name${[i]}
-
-// function showCardDetails(country_name) {
-// 	var countryName = document.querySelector("." + country_name)
-// 	var main_area = document.querySelector("main");
-// 	var country = document.querySelector(".country-details-area");
-// 	main_area.style.display = "none";
-// 	country.style.display = "block";
-// 	console.log(countryName)
-
-// }
-
-////////////////////////////////////////////////////////////
-
-// function isThisCountryWhatIwant(country) {
-// 	var countryCode = 'AFG';
-// 	return (country.alpha3Code == countryCode);
-// }
