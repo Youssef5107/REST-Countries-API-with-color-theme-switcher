@@ -92,38 +92,3 @@ select {
 	color: grey;
 	font-weight: 200;
 }
-
-.country-details-area {
-	padding: 7%;
-	display: none;
-}
-
-.back {
-	border: 0px;
-	border-radius: 5px;
-	box-shadow: 12px 7px 20px 6px rgb(57 75 84 / 8%);
-	padding: 10px;
-	background-color: white;
-}
-
-.arrow {
-	width: 10px;
-}
-
-.content-area {
-	display: flex;
-	justify-content: center;
-}
-
-.selected-country-flag {
-	width: 500px;
-	height: 500px;
-}
-
-.details-area-container {
-	display: flex;
-	flex-grow: 1;
-	justify-content: end;
-	margin-left: 50px;
-	align-items: center;
-}
