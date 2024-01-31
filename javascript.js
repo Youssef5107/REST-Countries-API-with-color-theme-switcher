@@ -48,6 +48,12 @@ function showCardDetails(countryCode) {
 	mainArea.style.display = "none";
 	countryArea.style.display = "block";
 	var country = data.find((country) => country.alpha3Code == countryCode);
+	for (i = 0; i < country.languages.length; i++) {
+		var languages = country.languages[i];
+	}
+	for (j = 0; j < country.currencies.length; j++) {
+		var currenciesName = country.currencies[j];
+	}
 	countryArea.innerHTML = `
 	<button onclick="hideCardDetails()" class="back"><img class="arrow"
 				src="images/4829870_arrow_back_left_icon.png">Back</button>
@@ -61,10 +67,10 @@ function showCardDetails(countryCode) {
 					<div class="selected-county-detail-title">Top Level Domain: <span class="selected-county-detail">${country.topLevelDomain}</span>
 					</div>
 					<div class="selected-county-detail-title">Population: <span class="selected-county-detail">${country.population}</span></div>
-					<div class="selected-county-detail-title">Currencies: <span class="selected-county-detail">${country.currencies.name}</span></div>
+					<div class="selected-county-detail-title">Currencies: <span class="selected-county-detail">${currenciesName.name}</span></div>
 					<div class="selected-county-detail-title">Region: <span class="selected-county-detail">${country.region}</span></div>
-					<div class="selected-county-detail-title">Sub Region: <span class="selected-county-detail">${country.languages}</span></div>
-					<div class="selected-county-detail-title">Languages: <span class="selected-county-detail">${country.subregion}</span></div>
+					<div class="selected-county-detail-title">Sub Region: <span class="selected-county-detail">${country.subregion}</span></div>
+					<div class="selected-county-detail-title">Languages: <span class="selected-county-detail">${languages.name}</span></div>
 					<div class="selected-county-detail-title">Capital: <span class="selected-county-detail">${country.capital}</span></div>
 					<div class="border-countries-detail-title">Border Countries: <span
 						class="border-countries-detail"></span> </div>

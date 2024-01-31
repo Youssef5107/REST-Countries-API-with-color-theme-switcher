@@ -1,7 +1,8 @@
 .dark header,
 .dark .card-details-area,
 .dark input,
-.dark select {
+.dark select,
+.dark .back {
 	background-color: hsl(209, 23%, 22%);
 	transition: all 0.8s ease;
 }
@@ -10,7 +11,11 @@
 .dark .light-mode,
 .dark h1,
 .dark .country-name,
-.dark .card-detail {
+.dark .card-detail,
+.dark .selected-county-name,
+.dark .selected-county-detail-title,
+.dark .border-countries-detail-title,
+.dark .back {
 	color: white;
 	transition: all 0.8s ease;
 }
