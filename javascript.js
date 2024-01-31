@@ -32,13 +32,14 @@ function drawCountryCards(data) {
 
 function darkMode() {
 	document.querySelector("body").classList.add("dark");
-	document.querySelector("header").classList.add("dark2");
-	document.querySelector("input").classList.add("dark2");
-	document.querySelector(".dark-mode").classList.add("dark2");
-	document.querySelector("select").classList.add("dark2");
-	var detailsArea = document.querySelectorAll(".card-details-area");
-	for (i = 0; i < detailsArea.length; i++)
-		detailsArea[i].classList.add("dark2");
+	document.querySelector(".dark-mode-btn-container").style.display = "none";
+	document.querySelector(".light-mode-btn-container").style.display = "flex"
+}
+
+function lightMode() {
+	document.querySelector("body").classList.remove("dark");
+	document.querySelector(".dark-mode-btn-container").style.display = "flex";
+	document.querySelector(".light-mode-btn-container").style.display = "none";
 }
 
 function showCardDetails(countryCode) {
@@ -83,10 +84,11 @@ function hideCardDetails() {
 
 function search() {
 	var input = document.querySelector("input");
-	var countryName = data.filter((givenName) => input.value == givenName.name);
+	var loweredSearchTxt = input.value.toLowerCase();
+	var countries = data.filter((country) => country.name.toLowerCase().indexOf(loweredSearchTxt) > -1);
 
-	drawCountryCards(countryName);
-	console.log(countryName);
+	drawCountryCards(countries);
+	console.log(countries);
 	console.log(input.value);
 }
 
