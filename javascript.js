@@ -56,10 +56,11 @@ function showCardDetails(countryCode) {
 
 	// //Concat the language names of the selectedCountry
 	var countryLanguages = "";
-	for (i = 0; i < selectedCountry.languages.length; i++) {
-		countryLanguages = countryLanguages + ", " + selectedCountry.languages[i].name;
+	if (selectedCountry.languages) {
+		for (i = 0; i < selectedCountry.languages.length; i++) {
+			countryLanguages = countryLanguages + ", " + selectedCountry.languages[i].name;
+		}
 	}
-
 	//Better way to oncat the language names of the selectedCountry
 	// var countryLanguagesArr = selectedCountry.languages.map(lang => lang.name);
 	// var countryLanguages = countryLanguagesArr.join(", ");
@@ -67,19 +68,24 @@ function showCardDetails(countryCode) {
 
 
 	// //Concat the currency names of the selectedCountry
-	// var currenciesName = "";
-	// for (j = 0; j < selectedCountry.currencies.length; j++) {
-	// 	currenciesName = currenciesName + ", " + selectedCountry.currencies[j].name;
-	// }
+	var currenciesName = "";
+	if (selectedCountry.currencies) {
+		for (j = 0; j < selectedCountry.currencies.length; j++) {
+			currenciesName = currenciesName + ", " + selectedCountry.currencies[j].name;
+		}
+	}
+
 
 	//Better way to oncat the language names of the selectedCountry
-	var currenciesNameArr = selectedCountry.currencies.map(cur => cur.name);
-	var currenciesName = currenciesNameArr.join(", ");
+	// var currenciesNameArr = selectedCountry.currencies.map(cur => cur.name);
+	// var currenciesName = currenciesNameArr.join(", ");
 
 	//Concat the buttons of the borders of the selectedCountry
 	var bordersNames = ""
-	for (l = 0; l < selectedCountry.borders.length; l++) {
-		bordersNames = bordersNames + `<span class="secondary-btns">${selectedCountry.borders[l]} , </span>`;
+	if (selectedCountry.borders) {
+		for (l = 0; l < selectedCountry.borders.length; l++) {
+			bordersNames = bordersNames + `<span class="secondary-btns">${selectedCountry.borders[l]} , </span>`;
+		}
 	}
 
 
