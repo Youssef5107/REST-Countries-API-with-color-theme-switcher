@@ -2,10 +2,13 @@
 .dark .card-details-area,
 .dark input,
 .dark select,
-.dark .back {
+.dark .back,
+.dark .search-btn {
 	background-color: hsl(209, 23%, 22%);
 	transition: all 0.8s ease;
+	color: white;
 }
+
 
 .dark select,
 .dark .light-mode,
