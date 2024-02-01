@@ -58,6 +58,7 @@
 	transition: all 0.8s ease;
 }
 
+.border-countries-detail,
 .selected-county-detail {
 	color: grey;
 	font-weight: 200;

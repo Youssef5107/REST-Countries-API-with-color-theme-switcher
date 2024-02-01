@@ -60,18 +60,29 @@ function showCardDetails(countryCode) {
 		}
 	}
 
+	else {
+		countryLanguages = `<span class="border-countries-detail">No data available</span>`;
+	}
+
 	var currenciesName = "";
 	if (selectedCountry.currencies) {
 		for (j = 0; j < selectedCountry.currencies.length; j++) {
 			currenciesName = currenciesName + ", " + selectedCountry.currencies[j].name;
 		}
 	}
+	else {
+		currenciesName = `<span class="border-countries-detail">No data available</span>`;
+	}
 
 	var bordersNames = ""
 	if (selectedCountry.borders) {
 		for (l = 0; l < selectedCountry.borders.length; l++) {
-			bordersNames = bordersNames + `<span class="secondary-btns">${selectedCountry.borders[l]} </span>`;
+			bordersNames = bordersNames + `<span class="border-countries-detail">${selectedCountry.borders[l]} </span>`;
 		}
+	}
+
+	else {
+		bordersNames = `<span class="border-countries-detail">No data available</span>`;
 	}
 
 
