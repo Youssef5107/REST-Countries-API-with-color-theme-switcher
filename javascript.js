@@ -47,36 +47,64 @@ function showCardDetails(countryCode) {
 	var countryArea = document.querySelector(".country-details-area");
 	mainArea.style.display = "none";
 	countryArea.style.display = "block";
-	var country = data.find((country) => country.alpha3Code == countryCode);
-	for (i = 0; i < country.languages.length; i++) {
-		var languages = country.languages[i];
+
+	var selectedCountry = data.find((country) => country.alpha3Code == countryCode);
+
+	//Log the countries with more than languages & the countries with ore than currency:
+	console.log("more than language", data.filter(c => c.languages.length > 1));
+	console.log("more than currency", data.filter(c => c.currencies).filter(c => c.currencies.length > 1));
+
+	// //Concat the language names of the selectedCountry
+	var countryLanguages = "";
+	for (i = 0; i < selectedCountry.languages.length; i++) {
+		countryLanguages = countryLanguages + ", " + selectedCountry.languages[i].name;
 	}
-	for (j = 0; j < country.currencies.length; j++) {
-		var currenciesName = country.currencies[j];
+
+	//Better way to oncat the language names of the selectedCountry
+	// var countryLanguagesArr = selectedCountry.languages.map(lang => lang.name);
+	// var countryLanguages = countryLanguagesArr.join(", ");
+
+
+
+	// //Concat the currency names of the selectedCountry
+	// var currenciesName = "";
+	// for (j = 0; j < selectedCountry.currencies.length; j++) {
+	// 	currenciesName = currenciesName + ", " + selectedCountry.currencies[j].name;
+	// }
+
+	//Better way to oncat the language names of the selectedCountry
+	var currenciesNameArr = selectedCountry.currencies.map(cur => cur.name);
+	var currenciesName = currenciesNameArr.join(", ");
+
+	//Concat the buttons of the borders of the selectedCountry
+	var bordersNames = ""
+	for (l = 0; l < selectedCountry.borders.length; l++) {
+		bordersNames = bordersNames + `<span class="secondary-btns">${selectedCountry.borders[l]} , </span>`;
 	}
+
+
 	countryArea.innerHTML = `
 	<button onclick="hideCardDetails()" class="back"><img class="arrow"
 				src="images/4829870_arrow_back_left_icon.png">Back</button>
 	<div class="content-area">
-			<img class="selected-country-flag" src="${country.flags.svg}">
+			<img class="selected-country-flag" src="${selectedCountry.flags.svg}">
 			<div class="details-area-container">
-					<div class="selected-county-name">${country.name}</div>
+					<div class="selected-country-name">${selectedCountry.name}</div>
 					<div class="selected-card-details-area">
 						<div class="details-area1">
-							<div class="selected-country-detail-title">Native Name: <span class="selected-county-detail">${country.nativeName}</span></div>
-							<div class="selected-country-detail-title">Top Level Domain: <span class="selected-county-detail">${country.topLevelDomain}</span></div>
-							<div class="selected-country-detail-title">Population: <span class="selected-county-detail">${country.population}</span></div>
-							<div class="selected-country-detail-title">Currencies: <span class="selected-county-detail">${currenciesName.name}</span></div>
-							<div class="selected-country-detail-title">Region: <span class="selected-county-detail">${country.region}</span></div>
+							<div class="selected-country-detail-title">Native Name: <span class="selected-county-detail">${selectedCountry.nativeName}</span></div>
+							<div class="selected-country-detail-title">Top Level Domain: <span class="selected-county-detail">${selectedCountry.topLevelDomain}</span></div>
+							<div class="selected-country-detail-title">Population: <span class="selected-county-detail">${selectedCountry.population}</span></div>
+							<div class="selected-country-detail-title">Currencies: <span class="selected-county-detail">${currenciesName}</span></div>
+							<div class="selected-country-detail-title">Region: <span class="selected-county-detail">${selectedCountry.region}</span></div>
 						</div>
 						<div class="details-area2">
-							<div class="selected-country-detail-title">Sub Region: <span class="selected-county-detail">${country.subregion}</span></div>
-							<div class="selected-country-detail-title">Languages: <span class="selected-county-detail">${languages.name}</span></div>
-							<div class="selected-country-detail-title">Capital: <span class="selected-county-detail">${country.capital}</span></div>
+							<div class="selected-country-detail-title">Sub Region: <span class="selected-county-detail">${selectedCountry.subregion}</span></div>
+							<div class="selected-country-detail-title">Languages: <span class="selected-county-detail">${countryLanguages}</span></div>
+							<div class="selected-country-detail-title">Capital: <span class="selected-county-detail">${selectedCountry.capital}</span></div>
 						</div>
 					</div>	
-					<div class="border-countries-detail-title">Border Countries: <span
-						class="border-countries-detail"></span> </div>
+					<div class="border-countries-detail-title">Border Countries: ${bordersNames} </div>
 			</div>
 		</div>
 	
@@ -94,10 +122,7 @@ function search() {
 	var input = document.querySelector("input");
 	var loweredSearchTxt = input.value.toLowerCase();
 	var countries = data.filter((country) => country.name.toLowerCase().indexOf(loweredSearchTxt) > -1);
-
 	drawCountryCards(countries);
-	console.log(countries);
-	console.log(input.value);
 }
 
 
