@@ -69,3 +69,34 @@
 	transition: all 0.8s ease;
 	margin-top: 40px;
 }
+
+@media(max-width:940px) and (min-width:700px) {
+	.selected-card-details-area {
+		flex-wrap: wrap;
+	}
+
+	.details-area2 {
+		margin: 0px;
+	}
+}
+
+@media(max-width:700px) {
+	.content-area {
+		flex-wrap: wrap;
+		margin-top: 50px;
+	}
+}
+
+@media(max-width:550px) {
+	.selected-card-details-area {
+		flex-wrap: wrap;
+	}
+
+	.details-area2 {
+		margin: 0px;
+	}
+
+	.details-area-container {
+		margin: 50px 0px 0px;
+	}
+}

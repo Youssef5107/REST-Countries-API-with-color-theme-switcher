@@ -84,7 +84,7 @@ function showCardDetails(countryCode) {
 	var bordersNames = ""
 	if (selectedCountry.borders) {
 		for (l = 0; l < selectedCountry.borders.length; l++) {
-			bordersNames = bordersNames + `<span class="secondary-btns">${selectedCountry.borders[l]} , </span>`;
+			bordersNames = bordersNames + `<span class="secondary-btns">${selectedCountry.borders[l]} </span>`;
 		}
 	}
 
