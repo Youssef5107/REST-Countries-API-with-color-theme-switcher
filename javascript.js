@@ -60,21 +60,23 @@ function showCardDetails(countryCode) {
 	<div class="content-area">
 			<img class="selected-country-flag" src="${country.flags.svg}">
 			<div class="details-area-container">
-				<div class="details-area">
 					<div class="selected-county-name">${country.name}</div>
-					<div class="selected-county-detail-title">Native Name: <span class="selected-county-detail">${country.nativeName}</span>
-					</div>
-					<div class="selected-county-detail-title">Top Level Domain: <span class="selected-county-detail">${country.topLevelDomain}</span>
-					</div>
-					<div class="selected-county-detail-title">Population: <span class="selected-county-detail">${country.population}</span></div>
-					<div class="selected-county-detail-title">Currencies: <span class="selected-county-detail">${currenciesName.name}</span></div>
-					<div class="selected-county-detail-title">Region: <span class="selected-county-detail">${country.region}</span></div>
-					<div class="selected-county-detail-title">Sub Region: <span class="selected-county-detail">${country.subregion}</span></div>
-					<div class="selected-county-detail-title">Languages: <span class="selected-county-detail">${languages.name}</span></div>
-					<div class="selected-county-detail-title">Capital: <span class="selected-county-detail">${country.capital}</span></div>
+					<div class="selected-card-details-area">
+						<div class="details-area1">
+							<div class="selected-country-detail-title">Native Name: <span class="selected-county-detail">${country.nativeName}</span></div>
+							<div class="selected-country-detail-title">Top Level Domain: <span class="selected-county-detail">${country.topLevelDomain}</span></div>
+							<div class="selected-country-detail-title">Population: <span class="selected-county-detail">${country.population}</span></div>
+							<div class="selected-country-detail-title">Currencies: <span class="selected-county-detail">${currenciesName.name}</span></div>
+							<div class="selected-country-detail-title">Region: <span class="selected-county-detail">${country.region}</span></div>
+						</div>
+						<div class="details-area2">
+							<div class="selected-country-detail-title">Sub Region: <span class="selected-county-detail">${country.subregion}</span></div>
+							<div class="selected-country-detail-title">Languages: <span class="selected-county-detail">${languages.name}</span></div>
+							<div class="selected-country-detail-title">Capital: <span class="selected-county-detail">${country.capital}</span></div>
+						</div>
+					</div>	
 					<div class="border-countries-detail-title">Border Countries: <span
 						class="border-countries-detail"></span> </div>
-				</div>
 			</div>
 		</div>
 	

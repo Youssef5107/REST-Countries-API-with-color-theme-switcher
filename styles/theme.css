@@ -15,7 +15,8 @@
 .dark .selected-county-name,
 .dark .selected-county-detail-title,
 .dark .border-countries-detail-title,
-.dark .back {
+.dark .back,
+.dark .selected-country-detail-title {
 	color: white;
 	transition: all 0.8s ease;
 }

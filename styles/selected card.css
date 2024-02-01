@@ -34,9 +34,37 @@
 }
 
 .details-area-container {
-	display: flex;
-	flex-grow: 1;
-	justify-content: end;
 	margin-left: 50px;
-	align-items: center;
+}
+
+.selected-country-name {
+	margin-bottom: 10px;
+	font-size: 25px;
+	font-weight: bold;
+	transition: all 0.8s ease;
+}
+
+.selected-card-details-area {
+	display: flex;
+	max-width: 500px;
+	width: 100%;
+}
+
+.details-area2 {
+	margin-left: 30px;
+}
+
+.selected-country-detail-title {
+	transition: all 0.8s ease;
+}
+
+.selected-county-detail {
+	color: grey;
+	font-weight: 200;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.border-countries-detail-title {
+	transition: all 0.8s ease;
 }
