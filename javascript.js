@@ -50,24 +50,16 @@ function showCardDetails(countryCode) {
 
 	var selectedCountry = data.find((country) => country.alpha3Code == countryCode);
 
-	//Log the countries with more than languages & the countries with ore than currency:
 	console.log("more than language", data.filter(c => c.languages.length > 1));
 	console.log("more than currency", data.filter(c => c.currencies).filter(c => c.currencies.length > 1));
 
-	// //Concat the language names of the selectedCountry
 	var countryLanguages = "";
 	if (selectedCountry.languages) {
 		for (i = 0; i < selectedCountry.languages.length; i++) {
 			countryLanguages = countryLanguages + ", " + selectedCountry.languages[i].name;
 		}
 	}
-	//Better way to oncat the language names of the selectedCountry
-	// var countryLanguagesArr = selectedCountry.languages.map(lang => lang.name);
-	// var countryLanguages = countryLanguagesArr.join(", ");
 
-
-
-	// //Concat the currency names of the selectedCountry
 	var currenciesName = "";
 	if (selectedCountry.currencies) {
 		for (j = 0; j < selectedCountry.currencies.length; j++) {
@@ -75,12 +67,6 @@ function showCardDetails(countryCode) {
 		}
 	}
 
-
-	//Better way to oncat the language names of the selectedCountry
-	// var currenciesNameArr = selectedCountry.currencies.map(cur => cur.name);
-	// var currenciesName = currenciesNameArr.join(", ");
-
-	//Concat the buttons of the borders of the selectedCountry
 	var bordersNames = ""
 	if (selectedCountry.borders) {
 		for (l = 0; l < selectedCountry.borders.length; l++) {
