@@ -75,6 +75,10 @@
 		flex-wrap: wrap;
 	}
 
+	.selected-country-name {
+		margin-top: 40px;
+	}
+
 	.details-area2 {
 		margin: 0px;
 	}
@@ -84,6 +88,10 @@
 	.content-area {
 		flex-wrap: wrap;
 		margin-top: 50px;
+	}
+
+	.selected-country-name {
+		margin-top: 40px;
 	}
 }
 
@@ -97,6 +105,6 @@
 	}
 
 	.details-area-container {
-		margin: 50px 0px 0px;
+		margin: 0px;
 	}
 }
