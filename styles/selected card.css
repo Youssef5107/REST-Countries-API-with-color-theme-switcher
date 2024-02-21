@@ -68,7 +68,7 @@
 
 .border-countries-detail-title {
 	transition: all 0.8s ease;
-	margin-top: 40px;
+	margin: 40px auto 30px;
 }
 
 @media(max-width:940px) and (min-width:700px) {
