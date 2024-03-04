@@ -121,12 +121,17 @@ function hideCardDetails() {
 
 }
 
-function search() {
-	var input = document.querySelector("input");
-	var loweredSearchTxt = input.value.toLowerCase();
-	var countries = data.filter((country) => country.name.toLowerCase().indexOf(loweredSearchTxt) > -1);
-	drawCountryCards(countries);
-}
+
+var input = document.querySelector("input");
+input.addEventListener("keydown", function (pressedKey) {
+	if (pressedKey.key == "Enter" && input.value != "") {
+		var loweredSearchTxt = input.value.toLowerCase();
+		var countries = data.filter((country) => country.name.toLowerCase().indexOf(loweredSearchTxt) > -1);
+		drawCountryCards(countries);
+	}
+})
+
+
 
 
 
